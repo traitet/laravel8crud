@@ -14,6 +14,7 @@
       {{ session()->get('success') }}
     </div><br />
   @endif
+  <a href="{{ route('games.create')}}" class="btn btn-primary">New Game</a>
   <table class="table table-striped">
     <thead>
         <tr>

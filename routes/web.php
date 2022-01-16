@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-// web.php
+// http://127.0.0.1:8000/
+Route::get('/', 'HomeController@index');
 
+// http://127.0.0.1:8000/product
+Route::get('product/{id}', 'HomeController@product');
+
+http://127.0.0.1:8000/game
 Route::resource('games', 'GameController');
+Route::get('game', 'GameController@index');
